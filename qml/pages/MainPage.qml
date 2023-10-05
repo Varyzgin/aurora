@@ -31,7 +31,7 @@ Page {
             text: qsTr("Lab 02")
             color: Theme.primaryColor
             anchors.horizontalCenter: parent.horizontalCenter
-            onClicked: pageStack.push(Qt.resolvedUrl("Lab1Page.qml"))
+            onClicked: pageStack.push(Qt.resolvedUrl("projectPage.qml"))
         }
         Button {
             text: qsTr("Lab 03")

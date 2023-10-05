@@ -35,7 +35,7 @@
 ##
 ################################################################################
 
-project(ru.auroraos.Lab1 CXX)
+project(ru.auroraos.project CXX)
 cmake_minimum_required(VERSION 3.5)
 
 find_package (Qt5 COMPONENTS Core Network Qml Gui Quick LinguistTools REQUIRED)
@@ -48,50 +48,50 @@ set(CMAKE_AUTOMOC ON)
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
 
-set(short_name Lab1)
+set(short_name project)
 
 FILE(GLOB TsFiles "translations/*.ts")
 qt5_add_translation(QmFiles ${TsFiles})
 
-add_executable(ru.auroraos.Lab1 src/main.cpp ${QmFiles})
-target_compile_definitions(ru.auroraos.Lab1 PRIVATE
+add_executable(ru.auroraos.project src/main.cpp ${QmFiles})
+target_compile_definitions(ru.auroraos.project PRIVATE
     $<$<OR:$<CONFIG:Debug>,$<CONFIG:RelWithDebInfo>>:QT_QML_DEBUG>
 )
-target_include_directories(ru.auroraos.Lab1 PRIVATE
+target_include_directories(ru.auroraos.project PRIVATE
     $<BUILD_INTERFACE:
     ${AURORA_INCLUDE_DIRS}
 >)
-target_link_libraries(ru.auroraos.Lab1
+target_link_libraries(ru.auroraos.project
     Qt5::Quick
     ${AURORA_LDFLAGS}
 )
 
-install(TARGETS ru.auroraos.Lab1
+install(TARGETS ru.auroraos.project
     RUNTIME DESTINATION bin
 )
 install(DIRECTORY qml
-    DESTINATION share/ru.auroraos.Lab1
+    DESTINATION share/ru.auroraos.project
 )
 
 foreach(_file IN LISTS QmFiles)
     get_filename_component(_filename "${_file}" NAME)
     string(REPLACE "${short_name}" "${PROJECT_NAME}" _full_filename "${_filename}")
-    install(FILES ${_file} DESTINATION share/ru.auroraos.Lab1/translations RENAME ${_full_filename})
+    install(FILES ${_file} DESTINATION share/ru.auroraos.project/translations RENAME ${_full_filename})
 endforeach()
 
-install(FILES ru.auroraos.Lab1.desktop
+install(FILES ru.auroraos.project.desktop
     DESTINATION share/applications
 )
-install(FILES icons/86x86/ru.auroraos.Lab1.png
+install(FILES icons/86x86/ru.auroraos.project.png
     DESTINATION share/icons/hicolor/86x86/apps
 )
-install(FILES icons/108x108/ru.auroraos.Lab1.png
+install(FILES icons/108x108/ru.auroraos.project.png
     DESTINATION share/icons/hicolor/108x108/apps
 )
-install(FILES icons/128x128/ru.auroraos.Lab1.png
+install(FILES icons/128x128/ru.auroraos.project.png
     DESTINATION share/icons/hicolor/128x128/apps
 )
-install(FILES icons/172x172/ru.auroraos.Lab1.png
+install(FILES icons/172x172/ru.auroraos.project.png
     DESTINATION share/icons/hicolor/172x172/apps
 )
 
@@ -104,18 +104,18 @@ add_custom_target(distfiles
         CONTRIBUTING.md
         LICENSE.BSD-3-CLAUSE.md
         README.md
-        ru.auroraos.Lab1.desktop
-        qml/Lab1.qml
+        ru.auroraos.project.desktop
+        qml/project.qml
         qml/cover/DefaultCoverPage.qml
         qml/pages/MainPage.qml
         qml/pages/AboutPage.qml
-        rpm/ru.auroraos.Lab1.spec
-        rpm/ru.auroraos.Lab1.changes.in
-        rpm/ru.auroraos.Lab1.changes.run.in
+        rpm/ru.auroraos.project.spec
+        rpm/ru.auroraos.project.changes.in
+        rpm/ru.auroraos.project.changes.run.in
         ${TsFiles})
 
 file(WRITE "${CMAKE_BINARY_DIR}/QtCreatorDeployment.txt"
     "${CMAKE_INSTALL_PREFIX}
-${CMAKE_BINARY_DIR}/ru.auroraos.Lab1:bin
+${CMAKE_BINARY_DIR}/ru.auroraos.project:bin
 ")
 

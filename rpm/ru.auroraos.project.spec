@@ -1,4 +1,4 @@
-Name:       ru.auroraos.Lab1
+Name:       ru.auroraos.project
 
 Summary:    My Aurora OS Application
 Version:    0.1

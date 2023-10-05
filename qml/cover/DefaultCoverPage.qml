@@ -45,7 +45,7 @@ CoverBackground {
         objectName: "placeholder"
         text: qsTr("Template")
         icon {
-            source: Qt.resolvedUrl("../icons/Lab1.svg")
+            source: Qt.resolvedUrl("../icons/project.svg")
             sourceSize { width: icon.width; height: icon.height }
         }
         forceFit: true
