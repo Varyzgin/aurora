@@ -15,40 +15,37 @@ Page {
             text: qsTr("3 Squards")         
             color: Theme.primaryColor
             anchors.horizontalCenter: parent.horizontalCenter
-            onClicked: pageStack.push(Qt.resolvedUrl("Lab2Sq3Page.qml"))
+            onClicked: pageStack.push(Qt.resolvedUrl("Lab03Squars.qml"))
         }
-
         Button {
             text: qsTr("5 Squards: Col & Row")
             color: Theme.primaryColor
             anchors.horizontalCenter: parent.horizontalCenter
-            onClicked: pageStack.push(Qt.resolvedUrl("Lab2Sq5Page.qml"))
+            onClicked: pageStack.push(Qt.resolvedUrl("Lab03SquarsRowsColumns.qml"))
         }
-
         Button {
             text: qsTr("5 Squards: Grid")
             color: Theme.primaryColor
             anchors.horizontalCenter: parent.horizontalCenter
-            onClicked: pageStack.push(Qt.resolvedUrl("Lab2Sq5GridPage.qml"))
+            onClicked: pageStack.push(Qt.resolvedUrl("Lab03SquarsGrid.qml"))
         }
-
         Button {
             text: qsTr("Transformation")
             color: Theme.primaryColor
             anchors.horizontalCenter: parent.horizontalCenter
-            onClicked: pageStack.push(Qt.resolvedUrl("Lab2TranPage.qml"))
+            onClicked: pageStack.push(Qt.resolvedUrl("Lab03Transform.qml"))
         }
         Button {
             text: qsTr("Animation")
             color: Theme.primaryColor
             anchors.horizontalCenter: parent.horizontalCenter
-            onClicked: pageStack.push(Qt.resolvedUrl("Lab2AnimPage.qml"))
+            onClicked: pageStack.push(Qt.resolvedUrl("Lab03Animation.qml"))
         }
         Button {
             text: qsTr("Dialog")
             color: Theme.primaryColor
             anchors.horizontalCenter: parent.horizontalCenter
-            onClicked: pageStack.push(Qt.resolvedUrl("Lab2DialPage.qml"))
+            onClicked: pageStack.push(Qt.resolvedUrl("Lab03Dialog.qml"))
         }
     }
 }

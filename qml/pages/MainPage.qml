@@ -31,19 +31,37 @@ Page {
             text: qsTr("Lab 02")
             color: Theme.primaryColor
             anchors.horizontalCenter: parent.horizontalCenter
-            onClicked: pageStack.push(Qt.resolvedUrl("projectPage.qml"))
+            onClicked: pageStack.push(Qt.resolvedUrl("Lab02.qml"))
         }
         Button {
             text: qsTr("Lab 03")
             color: Theme.primaryColor
             anchors.horizontalCenter: parent.horizontalCenter
-            onClicked: pageStack.push(Qt.resolvedUrl("Lab2Page.qml"))
+            onClicked: pageStack.push(Qt.resolvedUrl("Lab03.qml"))
         }
         Button {
             text: qsTr("Lab 04")
             color: Theme.primaryColor
             anchors.horizontalCenter: parent.horizontalCenter
-            onClicked: pageStack.push(Qt.resolvedUrl("Lab3Page.qml"))
+            onClicked: pageStack.push(Qt.resolvedUrl("Lab04.qml"))
+        }
+        Button {
+            text: qsTr("Lab 05")
+            color: Theme.primaryColor
+            anchors.horizontalCenter: parent.horizontalCenter
+            onClicked: pageStack.push(Qt.resolvedUrl("Lab05.qml"))
+        }
+        Button {
+            text: qsTr("Lab 06")
+            color: Theme.primaryColor
+            anchors.horizontalCenter: parent.horizontalCenter
+            onClicked: pageStack.push(Qt.resolvedUrl("Lab06.qml"))
+        }
+        Button {
+            text: qsTr("Lab 07")
+            color: Theme.primaryColor
+            anchors.horizontalCenter: parent.horizontalCenter
+            onClicked: pageStack.push(Qt.resolvedUrl("Lab07.qml"))
         }
         Label {
             anchors { left: parent.left; right: parent.right; margins: Theme.horizontalPageMargin }

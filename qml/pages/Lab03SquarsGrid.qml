@@ -19,8 +19,9 @@ Page {
             width: parent.width
             height: 2 * parent.width / 3
             color: backgroundColor
+
             Grid {
-                anchors { horizontalCenter: parent.horizontalCenter}
+                anchors.horizontalCenter: parent.horizontalCenter
                 columns: 3
                 rows: 2
                 spacing: Theme.paddingMedium

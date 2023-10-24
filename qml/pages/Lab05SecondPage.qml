@@ -1,15 +1,13 @@
-
 import QtQuick 2.0
 import Sailfish.Silica 1.0
 
 Page {
     Column {
-        id: layout
-        spacing: Theme.paddingMedium
         width: parent.width
+        spacing: Theme.paddingLarge
 
         PageHeader {
-            title: qsTr("Lab 02")
+            title: "Page 2"
         }
 
         Label {
@@ -22,12 +20,16 @@ Page {
             property int count: 0
             text: count
         }
-
         Button{
             text: qsTr("Increase")
             color: Theme.primaryColor
-            anchors{ horizontalCenter: parent.horizontalCenter }
+            anchors.horizontalCenter: parent.horizontalCenter
             onClicked: { labelcount.count++ }
+        }
+        Button {
+            text: "Back"
+            anchors.horizontalCenter: parent.horizontalCenter
+            onClicked: pageStack.navigateBack()
         }
     }
 }

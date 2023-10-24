@@ -39,15 +39,21 @@ import QtQuick 2.0
 import Sailfish.Silica 1.0
 
 CoverBackground {
-    objectName: "defaultCover"
-
     CoverPlaceholder {
-        objectName: "placeholder"
-        text: qsTr("Template")
-        icon {
-            source: Qt.resolvedUrl("../icons/project.svg")
-            sourceSize { width: icon.width; height: icon.height }
+        CoverActionList {
+            CoverAction {
+                iconSource: "image://theme/icon-m-add"
+                onTriggered:
+                    coverLabel.count++
+            }
+            CoverAction {
+                iconSource: "image://theme/icon-m-close"
+                onTriggered: coverLabel.count = 0
+            }
         }
+        property int count: 0
+        id: coverLabel
+        text: count
         forceFit: true
     }
 }

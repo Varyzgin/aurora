@@ -16,8 +16,10 @@ Page {
         Row {
             spacing: Theme.paddingMedium
             anchors { top: pageheader.bottom; topMargin: 10; horizontalCenter: parent.horizontalCenter }
+
             Column {
                 spacing: Theme.paddingMedium
+
                 Rectangle {
                     color: "#FF0000"
                     width: layout.size
@@ -31,6 +33,7 @@ Page {
             }
             Column {
                 spacing: Theme.paddingMedium
+
                 Rectangle {
                     color: "#00FF00"
                     width: layout.size
@@ -39,6 +42,7 @@ Page {
             }
             Column {
                 spacing: Theme.paddingMedium
+
                 Rectangle {
                     color: "#0000FF"
                     width: layout.size

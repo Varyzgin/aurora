@@ -12,23 +12,25 @@ Page {
             title: qsTr("3 Squards")
         }
 
-        Rectangle{
+        Rectangle {
             height: layout.size
             width: layout.size
             x: layout.size / 5
             color: "#FF0000"
-            Rectangle{
+
+            Rectangle {
                 height: layout.size
                 width: layout.size
                 x: layout.size
                 y: layout.size / 2
                 color: "#00FF00"
             }
-            Rectangle{
+            Rectangle {
                 height: layout.size
                 width: layout.size
                 x: 1.5 * layout.size
                 color: "#0000FF"
+
                 Text {
                     color: "#FFFFFF"
                     anchors.centerIn: parent
